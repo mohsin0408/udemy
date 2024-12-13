@@ -37,7 +37,7 @@ const CourseList = () => {
                 ))}
             </div>
 
-            <div className=" grid grid-cols-8 gap-5 mt-4     ">
+            <div className=" grid grid-cols-6 gap-5 mt-4     ">
                             {selectedCourse.courses.map((course) => (
                                 <div key={course.name} className="border p-4  ">
                                     <img src={course.image} alt={course.name} className="w-full h-auto mb-3" />
@@ -48,7 +48,11 @@ const CourseList = () => {
                                     <span className="bg-green-500 text-white px-2 py-1 rounded">{course.tag}</span>
                                 </div>
                             ))}
-                        </div>
+                </div>
+
+                <div>
+                    <button></button>
+                </div>
         </section>
     );
 };

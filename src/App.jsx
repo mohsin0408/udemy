@@ -1,18 +1,17 @@
-import React from "react";  
-import Header from "./components/header";
-import Hero from "./components/hero";
+import React from "react";
+
 import CourseList from "./components/CourseList";
+import Navbar from "./components/Navbar";
+import Slider from "./components/Slider";
 
 const App = () => {
-  return(
-    <>
+  return (
     <div>
-    <Header/>
-    <Hero/>
-    <CourseList/>
+      <Navbar />
+      <Slider />
+      <CourseList />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
