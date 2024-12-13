@@ -27,7 +27,6 @@ const Slider = () => {
 
   return (
     <div className=" container relative w-full h-[500px] ">
-      
       <div className="carousel-container relative w-full h-full">
         {data.carousel.map((image, index) => (
           <img
