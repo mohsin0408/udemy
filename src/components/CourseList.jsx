@@ -5,6 +5,9 @@ const CourseList = () => {
   const [selectedTab, setSelectedTab] = useState(data.courseList.tabsData[0]);
   const [selectedCourse, setSelectedCourse] = useState(selectedTab.topics[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [subCurrentIndex, setSubCurrentIndex] = useState(0);
+
+  console.log(currentIndex, "çurrent");
 
   return (
     <section className="container">
@@ -20,7 +23,11 @@ const CourseList = () => {
           <div key={tab.name} onClick={() => setCurrentIndex(index)}>
             <button
               className={`px-4 py-2 text-gray-600 text-xl font-semibold hover:text-black
-                ${currentIndex === index ? "border border-b-black" : ""} `}
+                ${
+                  currentIndex === index
+                    ? " text-black border border-b-black"
+                    : ""
+                } `}
               onClick={() => setSelectedTab(tab)}>
               <span>{tab.name}</span>
             </button>
@@ -29,20 +36,25 @@ const CourseList = () => {
       </div>
 
       <div className="mt-6 grid grid-cols-8 gap-5 text-sm items-center justify-center text-center ">
-        {selectedTab.topics.map((topic) => (
-          <div>
-            <div
+        {selectedTab.topics.map((topic, index) => (
+          <div onClick={() => setSubCurrentIndex(index)}>
+            <button
               key={topic.name}
-              className="mb-6 cursor-pointer bg-gray-200 p-3 rounded-3xl hover:bg-gray-300 "
-              onClick={() => setSelectedCourse(topic)}>
+              className={`mb-6 cursor-pointer p-3 rounded-3xl bg-gray-200 hover:bg-gray-300 whitespace-nowrap gap-7 ${
+                subCurrentIndex === index ? "bg-black text-white" : ""
+              }`}
+              onClick={() => setSelectedCourse(topic)}
+              style={{
+                backgroundColor: subCurrentIndex === index ? "black" : "",
+              }}>
               <h3 className="text-[18px] font-bold">{topic.name}</h3>
               <p>Total Learners: {topic.totalLearners}</p>
-            </div>
+            </button>
           </div>
         ))}
       </div>
 
-      <div className=" grid grid-cols-6 gap-5 mt-4 ">
+      <div className=" grid grid-cols-6 gap-5 mt-4 mb-10 ">
         {selectedCourse.courses.map((course) => (
           <div key={course.name} className="border p-4  ">
             <img
@@ -56,7 +68,7 @@ const CourseList = () => {
               Rating: {course.rating} | Buyers: {course.buyers}
             </p>
             <p>Price: ₹{course.price}</p>
-            <span className="bg-green-500 text-white px-2 py-1 rounded">
+            <span className="bg-green-500 text-white font-bold px-2 py-1 rounded">
               {course.tag}
             </span>
           </div>
@@ -64,7 +76,9 @@ const CourseList = () => {
       </div>
 
       <div>
-        <button></button>
+        <button className=" px-5 py-2 border font-bold border-black hover:bg-gray-200 ">
+          Show all Data Science courses
+        </button>
       </div>
     </section>
   );
