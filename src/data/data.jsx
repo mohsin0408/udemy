@@ -1,9 +1,5 @@
 import slider1 from "../assets/images/hero.jpg";
 import slider2 from "../assets/images/hero2.jpg";
-// import volkswagon from "../assets/images/volkswagen_logo.jpg";
-// import vimeo from "../assets/images/vimeo_logo.jpg";
-// import samsung from "../assets/images/samsung.jpg";
-// import hp from "../assets/images/hp.jpg";
 import citi from "../assets/images/citi_logo.svg";
 import hp from "../assets/images/hewlett_packard_enterprise_logo.svg";
 import cisco from "../assets/images/cisco_logo.svg";

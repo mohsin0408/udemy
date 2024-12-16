@@ -28,16 +28,23 @@ const CourseList = () => {
                     ? " text-black border border-b-black"
                     : ""
                 } `}
-              onClick={() => setSelectedTab(tab)}>
+              onClick={() => setSelectedTab(tab)}
+              style={{
+                color: currentIndex === index ? " black " : "",
+              }}>
               <span>{tab.name}</span>
             </button>
           </div>
         ))}
       </div>
 
-      <div className="mt-6 grid grid-cols-8 gap-5 text-sm items-center justify-center text-center ">
+      <div className="mt-6 grid grid-cols-8 gap-2 text-sm items-center justify-center text-center ">
+        <button className="absolute left-0 top-[113%] transform -translate-y-1/2 p-3 bg-gray-200 rounded-full shadow-lg">
+          &#8592;
+        </button>
+
         {selectedTab.topics.map((topic, index) => (
-          <div onClick={() => setSubCurrentIndex(index)}>
+          <div onClick={() => setSubCurrentIndex(index)} className=" w-14 ">
             <button
               key={topic.name}
               className={`mb-6 cursor-pointer p-3 rounded-3xl bg-gray-200 hover:bg-gray-300 whitespace-nowrap gap-7 ${
@@ -52,6 +59,9 @@ const CourseList = () => {
             </button>
           </div>
         ))}
+        <button className="absolute right-0 top-[113%] transform -translate-y-1/2 p-3 bg-gray-200 rounded-full shadow-lg">
+          &#8594;
+        </button>
       </div>
 
       <div className=" grid grid-cols-6 gap-5 mt-4 mb-10 ">

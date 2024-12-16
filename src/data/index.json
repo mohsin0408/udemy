@@ -1,2 +1,35 @@
+{
+  "goals": [
+    {
+      "id": 1,
+      "src": "src/assets/images/certificate.jpg",
+      "heading": "Hands-on training",
+      "description": "Upskill effectively with AI-powered coding exercises, practice tests, and quizzes."
+    },
+    {
+      "id": 2,
+      "src": "src/assets/images/organizations.jpg",
+      "heading": "Certification prep",
+      "description": "Prep for industry-recognized certifications by solving real-world challenges and earn badges along the way."
+    },
+    {
+      "id": 3,
+      "src": "src/assets/images/empty.jpg",
+      "heading": "Insights and analytics",
+      "description": "Fast-track goals with advanced insights plus a dedicated customer success team to help drive effective learning."
+    },
+    {
+      "id": 4,
+      "src": "src/assets/images/practice.jpg",
+      "heading": "Customizable content",
+      "description": "Create tailored learning paths for team and organization goals and even host your own content and resources."
+    }
+  ],
 
-{}
+  "panels": [
+    "src/assets/images/container.jpg",
+    "src/assets/images/popular.jpg",
+    "src/assets/images/business.jpg",
+    "src/assets/images/prep.jpg"
+  ]
+}
