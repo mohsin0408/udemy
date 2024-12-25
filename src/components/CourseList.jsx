@@ -7,8 +7,6 @@ const CourseList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [subCurrentIndex, setSubCurrentIndex] = useState(0);
 
-  console.log(currentIndex, "çurrent");
-
   return (
     <section className="container">
       <div>

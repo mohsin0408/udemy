@@ -27,9 +27,9 @@
   ],
 
   "panels": [
-    "src/assets/images/container.jpg",
     "src/assets/images/popular.jpg",
     "src/assets/images/business.jpg",
-    "src/assets/images/prep.jpg"
+    "src/assets/images/prep.jpg",
+    "src/assets/images/container.jpg"
   ]
 }

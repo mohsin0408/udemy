@@ -2,7 +2,6 @@ import React from "react";
 import { data } from "../data/data";
 
 const Companies = () => {
-  console.log(data.companies);
   return (
     <div className=" container text-center p-14 ">
       <h1 className=" text-[#6a6f73] text-xl mb-5 ">

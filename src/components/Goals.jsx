@@ -3,15 +3,13 @@ import data from "../data/index.json";
 
 const Goals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(currentIndex);
-  console.log(data.panels);
 
   return (
     <>
       <h2>Learning focused on your goals</h2>
 
       <div className=" container flex items-center justify-between gap-5">
-        <div className="w-1/2">
+        <div className="w-1/2 ">
           {data.goals.map((goal, index) => (
             <div
               key={index}
@@ -27,7 +25,7 @@ const Goals = () => {
             </div>
           ))}
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 pb-6 ">
           <img src={data.panels[currentIndex]} alt="...img" />
         </div>
       </div>

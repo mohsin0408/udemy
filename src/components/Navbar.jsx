@@ -5,8 +5,6 @@ import { data } from "../../src/data/data";
 const Navbar = () => {
   const [showLanguage, setShowLanguage] = useState(false);
 
-  console.log(data);
-
   return (
     <div className=" container flex gap-4 items-center px-6 border border-b-orange-300 ">
       <div>{data.header.logo}</div>
