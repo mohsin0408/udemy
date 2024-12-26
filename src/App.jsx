@@ -9,6 +9,7 @@ import Review from "./components/Review";
 
 import Trending from "./components/Trending";
 import TopTrending from "./components/TopTrending";
+import Favourite from "./components/Favourite";
 
 const App = () => {
   const [data, setData] = useState("");
@@ -32,6 +33,7 @@ const App = () => {
       <Review data={data} />
       <Trending data={data} />
       <TopTrending data={data} />
+      <Favourite data={data} />
     </div>
   );
 };
