@@ -6,10 +6,11 @@ import Companies from "./components/Companies";
 import Goals from "./components/Goals";
 import Plan from "./components/Plan";
 import Review from "./components/Review";
-
 import Trending from "./components/Trending";
 import TopTrending from "./components/TopTrending";
 import Favourite from "./components/Favourite";
+import Articles from "./components/Articles";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState("");
@@ -34,6 +35,8 @@ const App = () => {
       <Trending data={data} />
       <TopTrending data={data} />
       <Favourite data={data} />
+      <Articles data={data} />
+      <Footer data={data} />
     </div>
   );
 };
